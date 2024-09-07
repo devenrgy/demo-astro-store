@@ -17,6 +17,12 @@ importers:
       '@astrojs/tailwind':
         specifier: ^5.1.0
         version: 5.1.0(astro@4.15.3(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.5.4))(tailwindcss@3.4.10)
+      '@fontsource-variable/inter':
+        specifier: ^5.0.20
+        version: 5.0.20
+      '@fontsource/kaushan-script':
+        specifier: ^5.0.22
+        version: 5.0.22
       '@kobalte/core':
         specifier: ^0.13.6
         version: 0.13.6(solid-js@1.8.22)
@@ -60,6 +66,9 @@ importers:
       eslint-plugin-astro:
         specifier: ^1.2.3
         version: 1.2.3(eslint@9.9.1(jiti@1.21.6))(typescript@5.5.4)
+      eslint-plugin-format:
+        specifier: ^0.1.2
+        version: 0.1.2(eslint@9.9.1(jiti@1.21.6))
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
@@ -514,6 +523,12 @@ packages:
 
   '@floating-ui/utils@0.2.7':
     resolution: {integrity: sha512-X8R8Oj771YRl/w+c1HqAC1szL8zWQRwFvgDwT129k9ACdBoud/+/rX9V0qiMl6LWUdP9voC2nDVZYPMQQsb6eA==}
+
+  '@fontsource-variable/inter@5.0.20':
+    resolution: {integrity: sha512-dhzG4Zls/tIrf8h0FhTNi8jT/uFwNhdTY2vKe6DYqoXDYOfEcTVZDyh1hKml1rlLT44Y7OoKoGz8w7czDW7twQ==}
+
+  '@fontsource/kaushan-script@5.0.22':
+    resolution: {integrity: sha512-9PaVGLUOI9cC3a+p6hAOQO16ZskNgWQLq15aDvsvdRUO0qH45q7ESdw3P01v8JBlZdil4y3hxJq2zzoLuPnVQA==}
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -3842,14 +3857,11 @@ snapshots:
       '@floating-ui/dom': 1.6.10
       solid-js: 1.8.22
 
-  '@dprint/formatter@0.3.0':
-    optional: true
+  '@dprint/formatter@0.3.0': {}
 
-  '@dprint/markdown@0.17.8':
-    optional: true
+  '@dprint/markdown@0.17.8': {}
 
-  '@dprint/toml@0.6.2':
-    optional: true
+  '@dprint/toml@0.6.2': {}
 
   '@emmetio/abbreviation@2.3.3':
     dependencies:
@@ -4014,6 +4026,10 @@ snapshots:
       '@floating-ui/utils': 0.2.7
 
   '@floating-ui/utils@0.2.7': {}
+
+  '@fontsource-variable/inter@5.0.20': {}
+
+  '@fontsource/kaushan-script@5.0.22': {}
 
   '@humanwhocodes/module-importer@1.0.1': {}
 
@@ -5224,7 +5240,6 @@ snapshots:
     dependencies:
       eslint: 9.9.1(jiti@1.21.6)
       prettier-linter-helpers: 1.0.0
-    optional: true
 
   eslint-import-resolver-node@0.3.9:
     dependencies:
@@ -5238,8 +5253,7 @@ snapshots:
     dependencies:
       eslint: 9.9.1(jiti@1.21.6)
 
-  eslint-parser-plain@0.1.0:
-    optional: true
+  eslint-parser-plain@0.1.0: {}
 
   eslint-plugin-antfu@2.4.1(eslint@9.9.1(jiti@1.21.6)):
     dependencies:
@@ -5283,7 +5297,6 @@ snapshots:
       eslint-parser-plain: 0.1.0
       prettier: 3.3.3
       synckit: 0.9.1
-    optional: true
 
   eslint-plugin-import-x@4.2.1(eslint@9.9.1(jiti@1.21.6))(typescript@5.5.4):
     dependencies:
@@ -5549,8 +5562,7 @@ snapshots:
 
   fast-deep-equal@3.1.3: {}
 
-  fast-diff@1.3.0:
-    optional: true
+  fast-diff@1.3.0: {}
 
   fast-glob@3.3.2:
     dependencies:
@@ -6647,7 +6659,6 @@ snapshots:
   prettier-linter-helpers@1.0.0:
     dependencies:
       fast-diff: 1.3.0
-    optional: true
 
   prettier-plugin-astro@0.14.1:
     dependencies:
