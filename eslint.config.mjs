@@ -10,5 +10,6 @@ export default antfu({
 	rules: {
 		'antfu/top-level-function': 'off',
 		'style/jsx-quotes': ['error', 'prefer-single'],
+		'jsonc/indent': ['error', 'tab'],
 	},
 })
