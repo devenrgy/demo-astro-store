@@ -27,6 +27,8 @@
 	},
 	"devDependencies": {
 		"@antfu/eslint-config": "^3.2.0",
+		"@iconify-json/lucide": "^1.2.2",
+		"astro-icon": "^1.1.1",
 		"eslint": "^9.9.1",
 		"eslint-plugin-astro": "^1.2.3",
 		"prettier": "^3.3.3",

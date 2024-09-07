@@ -1,0 +1,62 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<header>
+	<div class='container py-10 flex items-center justify-between'>
+		<div>Astro Store</div>
+
+		<div class='flex items-center gap-20'>
+			<nav>
+				<ul class='flex gap-8 uppercase'>
+					<li><a href='/'>Home</a></li>
+					<li><a href='/about'>About us</a></li>
+					<li><a href='/shop'>Shop</a></li>
+					<li><a href='/collection'>Collection</a></li>
+				</ul>
+			</nav>
+
+			<ul class='flex gap-3 items-center'>
+				<li>
+					<a class='bg-zinc-100 rounded-full p-3 flex' href='#'>
+						<Icon size='20' name='lucide:search' />
+					</a>
+				</li>
+				<li>
+					<a class='bg-zinc-100 rounded-full p-3 flex' href='#'>
+						<Icon size='20' name='lucide:user-round' />
+					</a>
+				</li>
+				<li>
+					<a class='bg-zinc-100 rounded-full p-3 flex' href='#'>
+						<Icon size='20' name='lucide:star' />
+					</a>
+				</li>
+				<li class='flex gap-3 items-center'>
+					<a class='bg-zinc-100 rounded-full p-3 flex' href='#'>
+						<Icon size='20' name='lucide:shopping-cart' />
+					</a>
+					<span>$0.00</span>
+				</li>
+			</ul>
+
+			<ul class='flex items-center gap-3'>
+				<li>
+					<a class='bg-zinc-100 rounded-full p-3 flex' href='#'>
+						<Icon size='20' name='lucide:instagram' />
+					</a>
+				</li>
+				<li>
+					<a class='bg-zinc-100 rounded-full p-3 flex' href='#'>
+						<Icon size='20' name='lucide:twitter' />
+					</a>
+				</li>
+				<li>
+					<a class='bg-zinc-100 rounded-full p-3 flex' href='#'>
+						<Icon size='24' name='lucide:youtube' />
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</header>
