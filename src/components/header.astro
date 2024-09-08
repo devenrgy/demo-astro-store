@@ -1,5 +1,25 @@
 ---
 import { Icon } from 'astro-icon/components'
+
+const pathname = new URL(Astro.request.url).pathname
+const NAV_LINKS = [
+	{
+		path: '/',
+		name: 'Home',
+	},
+	{
+		path: '/about',
+		name: 'About us',
+	},
+	{
+		path: '/shop',
+		name: 'Shop',
+	},
+	{
+		path: '/collection',
+		name: 'Collection',
+	},
+]
 ---
 
 <header>
@@ -9,32 +29,72 @@ import { Icon } from 'astro-icon/components'
 		<div class='flex items-center gap-20'>
 			<nav>
 				<ul class='flex gap-8 uppercase'>
-					<li><a href='/'>Home</a></li>
-					<li><a href='/about'>About us</a></li>
-					<li><a href='/shop'>Shop</a></li>
-					<li><a href='/collection'>Collection</a></li>
+					{
+						NAV_LINKS.map(({ name, path }) => (
+							<li>
+								<a
+									class='hover:text-primary duration-300'
+									class:list={{
+										'decoration-primary decoration-4 pointer-events-none underline underline-offset-8':
+											pathname === path,
+									}}
+									href={path}
+								>
+									{name}
+								</a>
+							</li>
+						))
+					}
 				</ul>
 			</nav>
 
 			<ul class='flex gap-3 items-center'>
 				<li>
-					<a class='bg-zinc-100 rounded-full p-3 flex' href='#'>
-						<Icon size='20' name='lucide:search' />
+					<a
+						class='bg-zinc-100 hover:bg-primary group duration-300 rounded-full p-3 flex'
+						href='#'
+					>
+						<Icon
+							class='group-hover:text-white duration-300'
+							size='20'
+							name='lucide:search'
+						/>
 					</a>
 				</li>
 				<li>
-					<a class='bg-zinc-100 rounded-full p-3 flex' href='#'>
-						<Icon size='20' name='lucide:user-round' />
+					<a
+						class='bg-zinc-100 group hover:bg-primary duration-300 rounded-full p-3 flex'
+						href='#'
+					>
+						<Icon
+							class='group-hover:text-white duration-300'
+							size='20'
+							name='lucide:user-round'
+						/>
 					</a>
 				</li>
 				<li>
-					<a class='bg-zinc-100 rounded-full p-3 flex' href='#'>
-						<Icon size='20' name='lucide:star' />
+					<a
+						class='bg-zinc-100 group hover:bg-primary duration-300 rounded-full p-3 flex'
+						href='#'
+					>
+						<Icon
+							class='group-hover:text-white duration-300'
+							size='20'
+							name='lucide:star'
+						/>
 					</a>
 				</li>
 				<li class='flex gap-3 items-center'>
-					<a class='bg-zinc-100 rounded-full p-3 flex' href='#'>
-						<Icon size='20' name='lucide:shopping-cart' />
+					<a
+						class='bg-zinc-100 group hover:bg-primary duration-300 rounded-full p-3 flex'
+						href='#'
+					>
+						<Icon
+							class='group-hover:text-white duration-300'
+							size='20'
+							name='lucide:shopping-cart'
+						/>
 					</a>
 					<span>$0.00</span>
 				</li>
@@ -42,18 +102,39 @@ import { Icon } from 'astro-icon/components'
 
 			<ul class='flex items-center gap-3'>
 				<li>
-					<a class='bg-zinc-100 rounded-full p-3 flex' href='#'>
-						<Icon size='20' name='lucide:instagram' />
+					<a
+						class='bg-zinc-100 hover:bg-primary duration-300 group rounded-full p-3 flex'
+						href='#'
+					>
+						<Icon
+							class='group-hover:text-white duration-300'
+							size='20'
+							name='lucide:instagram'
+						/>
 					</a>
 				</li>
 				<li>
-					<a class='bg-zinc-100 rounded-full p-3 flex' href='#'>
-						<Icon size='20' name='lucide:twitter' />
+					<a
+						class='bg-zinc-100 hover:bg-primary duration-300 group rounded-full p-3 flex'
+						href='#'
+					>
+						<Icon
+							class='group-hover:text-white duration-300'
+							size='20'
+							name='lucide:twitter'
+						/>
 					</a>
 				</li>
 				<li>
-					<a class='bg-zinc-100 rounded-full p-3 flex' href='#'>
-						<Icon size='24' name='lucide:youtube' />
+					<a
+						class='bg-zinc-100 hover:bg-primary duration-300 group rounded-full p-3 flex'
+						href='#'
+					>
+						<Icon
+							class='group-hover:text-white duration-300'
+							size='24'
+							name='lucide:youtube'
+						/>
 					</a>
 				</li>
 			</ul>
