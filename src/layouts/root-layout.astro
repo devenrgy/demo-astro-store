@@ -2,6 +2,7 @@
 import '@fontsource-variable/inter'
 import '@fontsource/kaushan-script'
 
+import { ViewTransitions } from 'astro:transitions'
 import Header from '@/components/header.astro'
 import '@/styles/globals.css'
 
@@ -19,8 +20,9 @@ const { title = 'Astro Store' } = Astro.props
 		<meta name='viewport' content='width=device-width' />
 		<meta name='generator' content={Astro.generator} />
 		<title>{title}</title>
+		<ViewTransitions />
 	</head>
-	<body>
+	<body class='h-screen grid grid-rows-[auto_1fr]'>
 		<Header />
 		<main>
 			<slot />
