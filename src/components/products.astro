@@ -2,7 +2,7 @@
 import { Button } from './ui/button'
 
 const { products } = await fetch('https://dummyjson.com/products?limit=8').then(
-	(res) => res.json(),
+	res => res.json(),
 )
 ---
 
@@ -26,7 +26,7 @@ const { products } = await fetch('https://dummyjson.com/products?limit=8').then(
 			class='grid grid-cols-[repeat(4,300px)] justify-between gap-y-14 text-xl font-semibold'
 		>
 			{
-				products.map((product) => (
+				products.map((product: any) => (
 					<li class=''>
 						<img
 							class='h-[269px] mb-7 mx-auto'
