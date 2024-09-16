@@ -54,12 +54,21 @@ importers:
       '@antfu/eslint-config':
         specifier: ^3.2.0
         version: 3.2.0(@typescript-eslint/utils@8.4.0(eslint@9.9.1(jiti@1.21.6))(typescript@5.5.4))(@vue/compiler-sfc@3.5.1)(astro-eslint-parser@1.0.2(typescript@5.5.4))(eslint-plugin-astro@1.2.3(eslint@9.9.1(jiti@1.21.6))(typescript@5.5.4))(eslint-plugin-format@0.1.2(eslint@9.9.1(jiti@1.21.6)))(eslint@9.9.1(jiti@1.21.6))(prettier-plugin-astro@0.14.1)(typescript@5.5.4)
+      '@iconify-icon/solid':
+        specifier: ^2.1.1
+        version: 2.1.1(solid-js@1.8.22)
       '@iconify-json/lucide':
         specifier: ^1.2.2
         version: 1.2.2
       astro-icon:
         specifier: ^1.1.1
         version: 1.1.1
+      embla-carousel:
+        specifier: ^8.3.0
+        version: 8.3.0
+      embla-carousel-solid:
+        specifier: ^8.3.0
+        version: 8.3.0(solid-js@1.8.22)
       eslint:
         specifier: ^9.9.1
         version: 9.9.1(jiti@1.21.6)
@@ -537,6 +546,11 @@ packages:
   '@humanwhocodes/retry@0.3.0':
     resolution: {integrity: sha512-d2CGZR2o7fS6sWB7DG/3a95bGKQyHMACZ5aW8qGkkqQpUoZV6C0X7Pc7l4ZNMZkfNBf4VWNe9E1jRsf0G146Ew==}
     engines: {node: '>=18.18'}
+
+  '@iconify-icon/solid@2.1.1':
+    resolution: {integrity: sha512-1X7nt336uhilWO0iFPf5CCvYBgneiHaX2Fq254JPG9jasDW8/cXd2ZZbtmvSz7xra+Ve3uIn15n7f/8X6USmLg==}
+    peerDependencies:
+      solid-js: '>=1'
 
   '@iconify-json/lucide@1.2.2':
     resolution: {integrity: sha512-pXZ2GvRYW3G3JCnkM6grBhzok5UM9DaCKzUcyHJnBZb+ECxq77VNWJiXdjxrui0LpkwKtnm7hLkmRMVoAn8qNw==}
@@ -1508,6 +1522,19 @@ packages:
   electron-to-chromium@1.5.14:
     resolution: {integrity: sha512-bEfPECb3fJ15eaDnu9LEJ2vPGD6W1vt7vZleSVyFhYuMIKm3vz/g9lt7IvEzgdwj58RjbPKUF2rXTCN/UW47tQ==}
 
+  embla-carousel-reactive-utils@8.3.0:
+    resolution: {integrity: sha512-EYdhhJ302SC4Lmkx8GRsp0sjUhEN4WyFXPOk0kGu9OXZSRMmcBlRgTvHcq8eKJE1bXWBsOi1T83B+BSSVZSmwQ==}
+    peerDependencies:
+      embla-carousel: 8.3.0
+
+  embla-carousel-solid@8.3.0:
+    resolution: {integrity: sha512-QYwzYD+X65oX7agioW3BXEONH1aIrJDW5VgsDLy+Cqf3SzxMLcgh6V9BB8etdaQ6v+PRRZy/t12kkvCX1PFK0g==}
+    peerDependencies:
+      solid-js: ^1.0.0
+
+  embla-carousel@8.3.0:
+    resolution: {integrity: sha512-Ve8dhI4w28qBqR8J+aMtv7rLK89r1ZA5HocwFz6uMB/i5EiC7bGI7y+AM80yAVUJw3qqaZYK7clmZMUR8kM3UA==}
+
   emmet@2.4.7:
     resolution: {integrity: sha512-O5O5QNqtdlnQM2bmKHtJgyChcrFMgQuulI+WdiOw2NArzprUqqxUW6bgYtKvzKgrsYpuLWalOkdhNP+1jluhCA==}
 
@@ -2006,6 +2033,9 @@ packages:
 
   http-cache-semantics@4.1.1:
     resolution: {integrity: sha512-er295DKPVsV82j5kw1Gjt+ADA/XYHsajl82cGNQG2eyoPkvgUhX+nDIyelzhIWbbsXP39EHcI6l5tYs2FYqYXQ==}
+
+  iconify-icon@2.1.0:
+    resolution: {integrity: sha512-lto4XU3bwTQnb+D/CsJ4dWAo0aDe+uPMxEtxyOodw9l7R9QnJUUab3GCehlw2M8mDHdeUu/ufx8PvRQiJphhXg==}
 
   iconv-lite@0.6.3:
     resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
@@ -4035,6 +4065,11 @@ snapshots:
 
   '@humanwhocodes/retry@0.3.0': {}
 
+  '@iconify-icon/solid@2.1.1(solid-js@1.8.22)':
+    dependencies:
+      iconify-icon: 2.1.0
+      solid-js: 1.8.22
+
   '@iconify-json/lucide@1.2.2':
     dependencies:
       '@iconify/types': 2.0.0
@@ -5153,6 +5188,18 @@ snapshots:
 
   electron-to-chromium@1.5.14: {}
 
+  embla-carousel-reactive-utils@8.3.0(embla-carousel@8.3.0):
+    dependencies:
+      embla-carousel: 8.3.0
+
+  embla-carousel-solid@8.3.0(solid-js@1.8.22):
+    dependencies:
+      embla-carousel: 8.3.0
+      embla-carousel-reactive-utils: 8.3.0(embla-carousel@8.3.0)
+      solid-js: 1.8.22
+
+  embla-carousel@8.3.0: {}
+
   emmet@2.4.7:
     dependencies:
       '@emmetio/abbreviation': 2.3.3
@@ -5818,6 +5865,10 @@ snapshots:
       entities: 4.5.0
 
   http-cache-semantics@4.1.1: {}
+
+  iconify-icon@2.1.0:
+    dependencies:
+      '@iconify/types': 2.0.0
 
   iconv-lite@0.6.3:
     dependencies:

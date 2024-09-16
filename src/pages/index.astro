@@ -1,8 +1,10 @@
 ---
 import RootLayout from '@layouts/root-layout.astro'
-import Hero from '@components/hero.astro'
+import { Hero } from '@/components/hero'
+import Products from '@/components/products.astro'
 ---
 
 <RootLayout>
-	<Hero />
+	<Hero client:load />
+	<Products />
 </RootLayout>
